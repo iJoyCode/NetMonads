@@ -10,7 +10,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iJoyMonadsTests", "NUnitTestProject1\iJoyMonadsTests.csproj", "{067456C0-086C-46A8-B37F-1405717B7BFC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iJoyMonadsTests", "iJoyMonadsTests\iJoyMonadsTests.csproj", "{067456C0-086C-46A8-B37F-1405717B7BFC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

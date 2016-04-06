@@ -1,14 +1,13 @@
 ﻿using System;
 using iJoyMonads;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 
-namespace iJoyMonadsTests
+namespace NUnitTestProject1
 {
-    [TestClass]
+    [TestFixture]
     public class MaybeExtensionsTest
     {
-        [TestMethod]
-        [ExpectedException(typeof(NullReferenceException))]
+        [Test]
         public void TestGet()
         {
             var match = new Match
@@ -17,16 +16,12 @@ namespace iJoyMonadsTests
                 Team2 = null
             };
 
-            var title = match.Team2.Title;
-
+            Assert.Throws<NullReferenceException>(() => { var a = match.Team2.Title; });
             Assert.IsNotNull(match.Get(x => x.Team1).Get(x => x.Title));
             Assert.IsNull(match.Get(x => x.Team2).Get(x => x.Title));
-
-            
         }
     }
 
-    #region Fixtures
     public class Match
     {
         public Team Team1 { get; set; }
@@ -37,5 +32,4 @@ namespace iJoyMonadsTests
     {
         public string Title { get; set; }
     }
-    #endregion
 }
