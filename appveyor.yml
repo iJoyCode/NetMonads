@@ -7,11 +7,6 @@ build:
   verbosity: minimal
 before_build:
 - nuget restore %solutionFile%
-- set NUNIT3_HOME=C:\Tools\NUnit3
-- appveyor DownloadFile https://github.com/nunit/nunit/releases/download/3.2.0/NUnit-3.2.0.zip
-- 7z x -o%NUNIT3_HOME% NUnit-3.2.0.zip > NUL
-- move %NUNIT3_HOME%\bin\nunit3-console.exe %NUNIT3_HOME%\bin\nunit-console.exe
-- set PATH=%NUNIT3_HOME%\bin;%PATH%
 test_script: 
 - .\packages\OpenCover.4.6.519\tools\OpenCover.Console.exe -register:user -target:"nunit3-console.exe" -targetargs:"C:\projects\netmonads\iJoyMonadsTests\bin\Debug\NetMonadsTests.dll -noshadow" -returntargetcode -filter:"+[NetMonads*]*" -excludebyattribute:*.ExcludeFromCodeCoverage* -hideskipped:All -output:.\NetMonads_coverage.xml 
 - "SET PATH=C:\\Python34;C:\\Python34\\Scripts;%PATH%" 
