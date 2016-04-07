@@ -1,8 +1,8 @@
 ﻿using System;
-using iJoyMonads;
+using NetMonads;
 using NUnit.Framework;
 
-namespace NUnitTestProject1
+namespace NetMonadsTests
 {
     [TestFixture]
     public class MaybeExtensionsTest

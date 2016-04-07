@@ -7,8 +7,8 @@
     <ProjectGuid>{1499EE51-D758-45B4-9ECB-1E93AF6FBA77}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>iJoyMonads</RootNamespace>
-    <AssemblyName>iJoyMonads</AssemblyName>
+    <RootNamespace>NetMonads</RootNamespace>
+    <AssemblyName>NetMonads</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

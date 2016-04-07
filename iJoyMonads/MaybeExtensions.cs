@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace iJoyMonads
+namespace NetMonads
 {
     public static class MaybeExtensions
     {
