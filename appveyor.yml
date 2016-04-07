@@ -8,7 +8,7 @@ build:
 before_build:
 - nuget restore %solutionFile%
 test_script: 
-- .\packages\OpenCover.4.6.519\tools\OpenCover.Console.exe -register:user -target:"nunit3-console.exe" -targetargs:"C:\projects\netmonads\iJoyMonadsTests\bin\Debug\NetMonadsTests.dll -noshadow" -returntargetcode -filter:"+[NetMonads*]*" -excludebyattribute:*.ExcludeFromCodeCoverage* -hideskipped:All -output:.\NetMonads_coverage.xml 
+- .\packages\OpenCover.4.6.519\tools\OpenCover.Console.exe -register:user -target:"nunit3-console.exe" -targetargs:"C:\projects\netmonads\iJoyMonadsTests\bin\Debug\NetMonadsTests.dll" -returntargetcode -filter:"+[NetMonads*]*" -excludebyattribute:*.ExcludeFromCodeCoverage* -hideskipped:All -output:.\NetMonads_coverage.xml 
 - "SET PATH=C:\\Python34;C:\\Python34\\Scripts;%PATH%" 
 - pip install codecov 
 - codecov -f "NetMonads_coverage.xml" 
