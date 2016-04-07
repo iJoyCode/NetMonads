@@ -13,6 +13,8 @@ before_build:
 - move %NUNIT3_HOME%\bin\nunit3-console.exe %NUNIT3_HOME%\bin\nunit-console.exe
 - set PATH=%NUNIT3_HOME%\bin;%PATH%
 test_script: 
+- nunit-console.exe
+- nunit3-console.exe
 - .\packages\OpenCover.4.6.519\tools\OpenCover.Console.exe -register:user -target:"nunit-console.exe" -targetargs:"C:\projects\netmonads\iJoyMonadsTests\bin\Debug\NetMonadsTests.dll -noshadow" -returntargetcode -filter:"+[NetMonads*]*" -excludebyattribute:*.ExcludeFromCodeCoverage* -hideskipped:All -output:.\NetMonads_coverage.xml 
 - "SET PATH=C:\\Python34;C:\\Python34\\Scripts;%PATH%" 
 - pip install codecov 
